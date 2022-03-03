@@ -8,11 +8,11 @@ const data = [
             }, {
                 text: 'NFT preview card component',
                 url: './nft-preview-card-component-main/index.html'
+            }, {
+                text: 'Order summary component challenge hub',
+                url: './order-summary-component-main/index.html'
             },
             // {
-            //     text: 'Order summary component challenge hub',
-            //     url: './order-summary-component-main/index.html'
-            // }, {
             //     text: 'Stats Preview Card',
             //     url: './stats-preview-card-component-main/index.html'
             // }
