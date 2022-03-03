@@ -5,11 +5,11 @@ const data = [
             {
                 text: 'QR code component',
                 url: './qr-code-component-main/index.html'
-            }, 
+            }, {
+                text: 'NFT preview card component',
+                url: './nft-preview-card-component-main/index.html'
+            },
             // {
-            //     text: 'NFT preview card component',
-            //     url: './nft-preview-card-component-main/index.html'
-            // }, {
             //     text: 'Order summary component challenge hub',
             //     url: './order-summary-component-main/index.html'
             // }, {
