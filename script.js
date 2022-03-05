@@ -11,11 +11,10 @@ const data = [
             }, {
                 text: 'Order summary component challenge hub',
                 url: './order-summary-component-main/index.html'
-            },
-            // {
-            //     text: 'Stats Preview Card',
-            //     url: './stats-preview-card-component-main/index.html'
-            // }
+            }, {
+                text: 'Stats Preview Card',
+                url: './stats-preview-card-component-main/index.html'
+            }
         ]
     },
     // {
