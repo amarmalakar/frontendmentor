@@ -14,6 +14,9 @@ const data = [
             }, {
                 text: 'Stats Preview Card',
                 url: './stats-preview-card-component-main/index.html'
+            }, {
+                text: '3 column preview card component',
+                url: './3-column-preview-card-component-main'
             }
         ]
     },
