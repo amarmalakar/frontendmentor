@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+    :root {
+      --mainBg: rgb(25, 161, 173);
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    main {
+      width: 100%;
+      height: 100vh;
+      background-color: var(--mainBg);
+      overflow: hidden;
+      position: relative;
+    }
+    .bg__image--1 {
+      position: absolute;
+      top: -70%;
+      left: -30%;
+    }
+    .bg__image--2 {
+      position: absolute;
+      bottom: -70%;
+      right: -30%;
+    }
+    .card {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      /* padding: 12px; */
+      background-color: #fff;
+      box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.65);
+      border-radius: 16px;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+    }
+    .card__header {
+      width: 100%;
+      height: 150px;
+      background-image: url(./images/bg-pattern-card.svg);
+      background-size: cover;
+      position: relative;
+    }
+    .card__header--image {
+      border: 6px solid #fff;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: calc(100% - 50px);
+      left: calc(50% - 50px);
+    }
+    .card__body {
+      margin-top: 64px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+    h3 {font-weight: 600;}
+    h3 > span {font-weight: 400;color: #666;}
+    h4 {font-weight: 400;color: #666;margin: 6px 0 24px 0;}
+
+    .card__footer {
+      padding: 16px;
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
+    .card__footer--child > p {
+      font-size: 10px;
+      color: #666;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 636px) {
+      .bg__image--1 {
+        width: 500px;
+        height: 500px;
+        top: -35%;
+        left: -35%;
+      }
+      .bg__image--2 {
+        width: 500px;
+        height: 500px;
+        bottom: -35%;
+        right: -35%;
+      }
+      .card {
+        width: 312px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<main>
+  <img src="./images/bg-pattern-top.svg" class="bg__image--1">
+  <img src="./images/bg-pattern-bottom.svg" class="bg__image--2">
+
+  <div class="card">
+    <div class="card__header">
+      <img src="./images/image-victor.jpg" alt="" class="card__header--image">
+    </div>
+
+    <div class="card__body">
+      <h3>Victor Crest <span>26</span></h3>
+      <h4>London</h4>
+    </div>
+
+    <div class="card__footer">
+      <div class="card__footer--child">
+        <h3>80K</h3>
+        <p>Followers</p>
+      </div>
+      <div class="card__footer--child">
+        <h3>803K</h3>
+        <p>Likes</p>
+      </div>
+      <div class="card__footer--child">
+        <h3>1.4K</h3>
+        <p>Photos</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>

@@ -17,6 +17,9 @@ const data = [
             }, {
                 text: '3 column preview card component',
                 url: './3-column-preview-card-component-main'
+            }, {
+                text: 'profile card component',
+                url: './profile-card-component-main'
             }
         ]
     },
