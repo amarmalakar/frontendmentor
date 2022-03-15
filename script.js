@@ -20,6 +20,9 @@ const data = [
             }, {
                 text: 'profile card component',
                 url: './profile-card-component-main'
+            }, {
+                text: "faq accordion card",
+                url: "./faq-accordion-card-main"
             }
         ]
     },
