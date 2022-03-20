@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./images/favicon-32x32.png"
+  />
+
+  <title>Frontend Mentor | Social proof section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    :root {
+      --brandColor: rgb(81, 31, 80);
+      --brandColorLight: rgb(247, 242, 248);
+      --brandColorDark: rgb(235, 102, 232);
+    }
+    main {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+    main::after {
+      position: absolute;
+      content: '';
+      top: 0;left: 0;
+      width: 5000px;
+      height: 5000px;
+      background: url(./images/bg-pattern-top-desktop.svg);
+      background-repeat: no-repeat;
+    }
+    main::before {
+      position: absolute;
+      content: '';
+      right: 0;bottom: 0;
+      width: 700px;
+      height: 700px;
+      background: url(./images/bg-pattern-bottom-desktop.svg);
+      background-repeat: no-repeat;
+    }
+    .container {
+      max-width: 996px;
+      margin: auto;
+      padding: 12px;
+      margin-top: 50px;
+    }
+
+    .xl-heading {color: var(--brandColor);font-size: 44px;line-height: 1;}
+    .text__col > p {margin: 18px 0;color: #777;}
+    .flex {
+      display: flex;
+      justify-content: space-between;
+    }
+    .text__col {width: 400px;}
+    .star__container {
+      background-color: var(--brandColorLight);
+      display: flex;
+      align-items: center;
+      padding: 12px 56px 12px 24px;
+      border-radius: 6px;
+      color: var(--brandColor);
+      font-weight: 600;
+      margin-top: 16px;
+    }
+    .star__container > ul {list-style: none;display: flex;margin-right: 12px;}
+    .star__container--1 {margin-right: 60px;margin-left: 0;}
+    .star__container--2 {margin-right: 30px;margin-left: 30px;}
+    .star__container--3 {margin-left: 60px;}
+
+    .card__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+    .card {
+      background-color: var(--brandColor);
+      border-radius: 12px;
+      padding: 30px;
+      color: #fff;
+      font-size: 12px;
+    }
+    .card__person {display: flex;align-items: center;margin-bottom: 24px;}
+    .card__person > img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    .card__person--text {font-size: 14px;}
+    .card__person--text > p {color: var(--brandColorDark);}
+    .card--1 {margin-top: 0;margin-bottom: 30px;}
+    .card--2 {margin-top: 15px;margin-bottom: 15px;}
+    .card--3 {margin-top: 30px;margin-bottom: 0;}
+
+    @media (max-width: 768px) {
+      main::after {
+        background-image: url(./images/bg-pattern-top-mobile.svg);
+      }
+      main::before {
+        background-image: url(./images/bg-pattern-bottom-mobile.svg);
+      }
+      .container {
+        max-width: 396px;
+      }
+      .text__col {text-align: center;}
+      .flex {display: block;}
+      .text__col {width: 100%;}
+      .star__container {
+        margin: 0;margin-top: 16px;
+        display: block;
+        padding: 16px;
+        text-align: center;
+      }
+      .star__container > ul {
+        justify-content: center;
+      }
+
+      .card__list {grid-template-columns: repeat(1, 1fr);}
+      .card {margin: 0;}
+    }
+  </style>
+</head>
+<body>
+
+<main>
+  <div class="container">
+    <div class="flex">
+      <div class="text__col">
+        <h1 class="xl-heading">
+          10,000+ of our <br>
+          users love our <br>
+          products.
+        </h1>
+        <p>We only provide great products combined with excellent customer service. See what our satisfied customers are saying about our services.</p>
+      </div>
+
+      <div class="stars__col">
+        <div class="star__container star__container--1">
+          <ul>
+            <li><img src="./images/icon-star.svg" alt=""></li>
+            <li><img src="./images/icon-star.svg" alt=""></li>
+            <li><img src="./images/icon-star.svg" alt=""></li>
+            <li><img src="./images/icon-star.svg" alt=""></li>
+            <li><img src="./images/icon-star.svg" alt=""></li>
+          </ul>
+          <p>Rated 5 Stars in Report Guru</p>
+        </div>
+        <div class="star__container star__container--2">
+          <ul>
+            <li><img src="./images/icon-star.svg" alt=""></li>
+            <li><img src="./images/icon-star.svg" alt=""></li>
+            <li><img src="./images/icon-star.svg" alt=""></li>
+            <li><img src="./images/icon-star.svg" alt=""></li>
+            <li><img src="./images/icon-star.svg" alt=""></li>
+          </ul>
+          <p>Rated 5 Stars in Report Guru</p>
+        </div>
+        <div class="star__container star__container--3">
+          <ul>
+            <li><img src="./images/icon-star.svg" alt=""></li>
+            <li><img src="./images/icon-star.svg" alt=""></li>
+            <li><img src="./images/icon-star.svg" alt=""></li>
+            <li><img src="./images/icon-star.svg" alt=""></li>
+            <li><img src="./images/icon-star.svg" alt=""></li>
+          </ul>
+          <p>Rated 5 Stars in Report Guru</p>
+        </div>
+      </div>
+    </div>
+    
+    <br>
+
+    <!-- card grid -->
+    <div class="card__list">
+      <div class="card card--1">
+        <div class="card__person">
+          <img src="./images/image-colton.jpg" alt="">
+          <div class="card__person--text">
+            <h4>Colton Smith</h4>
+            <p>Verified Buyer</p>
+          </div>
+        </div>
+        <p>"We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also received it in time. Excellent!"</p>
+      </div>
+      <div class="card card--2">
+        <div class="card__person">
+          <img src="./images/image-irene.jpg" alt="">
+          <div class="card__person--text">
+            <h4>Irene Roberts</h4>
+            <p>Verified Buyer</p>
+          </div>
+        </div>
+        <p>" Customer service is always excellent and very quick turn around. Completely delighted with the purchase and the speed of delivery."</p>
+      </div>
+      <div class="card card--3">
+        <div class="card__person">
+          <img src="./images/image-anne.jpg" alt="">
+          <div class="card__person--text">
+            <h4>Anne Wallace</h4>
+            <p>Verified Buyer</p>
+          </div>
+        </div>
+        <p>" Put an order with this company and can only praise them for the very high standard. Will definitely use them again and recommend them to everyone!"</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>

@@ -23,6 +23,9 @@ const data = [
             }, {
                 text: "faq accordion card",
                 url: "./faq-accordion-card-main"
+            }, {
+                text: 'social proof section',
+                url: "./social-proof-section-master"
             }
         ]
     },
