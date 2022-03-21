@@ -29,6 +29,9 @@ const data = [
             }, {
                 text: 'article preview component',
                 url: './article-preview-component-master'
+            }, {
+                text: 'four card feature section',
+                url: './four-card-feature-section-master'
             }
         ]
     },
