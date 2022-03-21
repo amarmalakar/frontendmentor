@@ -26,6 +26,9 @@ const data = [
             }, {
                 text: 'social proof section',
                 url: "./social-proof-section-master"
+            }, {
+                text: 'article preview component',
+                url: './article-preview-component-master'
             }
         ]
     },
