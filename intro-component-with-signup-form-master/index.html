@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | Intro component with sign up form</title>
+    
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap');
+        * {
+            margin: 0;
+            bottom: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        :root {
+            --purple: rgb(93, 84, 163);
+            --green: rgb(55, 204, 138);
+            --clr-dark-blue: #3e3c49;
+            --clr-red: #ff7a7a;
+        }
+        main {
+            width: 100%;
+            min-height: 100vh;
+            background: url(./images/bg-intro-desktop.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .main__color--overlay {
+            width: 100%;
+            min-height: 100vh;
+            background: rgba(255, 0, 0, 0.5);
+        }
+        .wrapper {
+            width: 100%;
+            min-height: 100vh;
+            padding: 16px;
+            max-width: 996px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 24px;
+            place-items: center;
+        }
+        .text__col {color: #fff;}
+        .text-xl {
+            font-size: 44px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        .form__col {width: 100%;}
+        .top__message {
+            background-color: var(--purple);
+            color: #fff;
+            text-align: center;
+            padding: 16px;
+            border-radius: 12px;
+        }
+        .form__wrapper {
+            padding: 24px;
+            background-color: #fff;
+            border-radius: 12px;
+            margin-top: 18px;
+        }
+        .form__control {
+            display: block;
+            width: 100%;
+            padding: 0.6rem 1rem;
+            position: relative;
+        }
+        .form__control:first-of-type {
+            margin-top: 20px;
+        }
+        .form__control:last-of-type {
+            margin-bottom: 20px;
+        }
+        .form__control .error-icon {
+            position: absolute;
+            right: 8%;
+            top: 28%;
+            display: none;
+        }
+        .form__control .error-icon.visible {
+            display: inline-block;
+        }
+        .form__control input {
+            display: block;
+            width: 100%;
+            padding: 1.2rem 1.8rem;
+            outline: none;
+            border-radius: 4px;
+            border: 1px solid #ededed;
+            font-weight: bolder;
+            color: var(--clr-dark-blue);
+        }
+        .form__control input:focus {
+            border: 1px solid var(--clr-dark-blue);
+            color: var(--clr-dark-blue);
+        }
+        .form__control input.invalid {
+            border-color: var(--clr-red) !important;
+            border-width: 2px !important;
+        }
+        .form__control span.error {
+            display: none;
+        }
+        .form__control span.error.visible {
+            display: block;
+            text-align: right;
+            color: var(--clr-red);
+            font-style: italic;
+            font-size: 0.8em;
+        }
+        .form__control > button {
+            width: 100%;
+            background-color: var(--green);
+            color: #fff;
+            cursor: pointer;
+            margin-bottom: 12px;
+            border: none;
+            outline: none;
+            font-weight: 600;
+            padding: 16px;
+            border-radius: 6px;
+        }
+        .form__wrapper p {
+            text-align: center;
+            font-size: 10px;
+            color: #aaa;
+        }
+        .form__wrapper p > a {
+            font-weight: 600;
+            text-decoration: none;
+            color: crimson;
+        }
+
+        @media (max-width: 768px) {
+            .wrapper {
+                max-width: 496px;
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .text__col {text-align: center;padding: 45px 0;}
+        }
+    </style>
+</head>
+<body>
+    
+<main>
+  <div class="main__color--overlay">
+        <div class="wrapper">
+            <div class="text__col">
+                <h1 class="text-xl">Learn to code by watching others</h1>
+                <p>See how experienced developes solve problems in real-time Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+            </div>
+
+            <div class="form__col">
+                <div class="top__message">
+                    <b>Try it free 7 days</b> then $20/mo. thereafter
+                </div>
+
+                <div class="form__wrapper">
+                    <div class="form__control">
+                        <input type="text" class="first_name" placeholder="First Name" id="fname">
+                        <span><img src="images/icon-error.svg" alt="error" class="error-icon"></span>
+                        <span class="error">First name cannot be empty</span>
+                    </div>
+
+                    <div class="form__control">
+                        <input type="text" class="last_name" placeholder="Last Name" id="lname">
+                        <span><img src="images/icon-error.svg" alt="error" class="error-icon"></span>
+                        <span class="error">Last name cannot be empty</span>
+                    </div>
+        
+                    <div class="form__control">
+                        <input type="email" class="email" placeholder="Email Address" id="email">
+                        <span><img src="images/icon-error.svg" alt="error" class="error-icon"></span>
+                        <span class="error">Email cannot be empty</span>
+                    </div>
+        
+                    <div class="form__control">
+                        <input type="password" class="password" placeholder="Password" id="pass">
+                        <span><img src="images/icon-error.svg" alt="error" class="error-icon"></span>
+                        <span class="error">Password cannot be empty</span>
+                    </div>
+
+                    <div class="form__control" style="margin-bottom: 0;">
+                        <button>CLAIM YOUR FREE TRIAL</button>
+                    </div>
+
+                    <p>
+                        By clicking the button you are agreeing to our 
+                        <a href="#">Terms and Services</a>
+                    </p>
+                      
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<script>
+
+const inputs = document.getElementsByTagName('input');
+
+function validateInputs() {
+    for (let i=0; i< inputs.length; i++) {
+        inputs[i].addEventListener('blur', function () {
+            const error = document.getElementsByClassName('error');
+            const errorIcon = document.getElementsByClassName('error-icon');
+            
+            if (!this.value) {
+                this.classList.add('invalid');
+                error[i].classList.add('visible');
+                errorIcon[i].classList.add('visible');
+            } else {
+                this.classList.remove('invalid');
+                error[i].classList.remove('visible');
+                errorIcon[i].classList.remove('visible');
+            }
+        })
+    }
+}
+
+validateInputs();
+
+</script>
+
+</body>
+</html>

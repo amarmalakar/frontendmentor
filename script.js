@@ -35,6 +35,9 @@ const data = [
             }, {
                 text: 'base apparel coming soon',
                 url: './base-apparel-coming-soon-master'
+            }, {
+                text: 'intro component with signup form',
+                url: './intro-component-with-signup-form-master'
             }
         ]
     },
