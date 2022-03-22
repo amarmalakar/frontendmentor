@@ -32,6 +32,9 @@ const data = [
             }, {
                 text: 'four card feature section',
                 url: './four-card-feature-section-master'
+            }, {
+                text: 'base apparel coming soon',
+                url: './base-apparel-coming-soon-master'
             }
         ]
     },
