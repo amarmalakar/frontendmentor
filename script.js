@@ -38,6 +38,9 @@ const data = [
             }, {
                 text: 'intro component with signup form',
                 url: './intro-component-with-signup-form-master'
+            }, {
+                text: 'single price grid component',
+                url: './single-price-grid-component-master'
             }
         ]
     },

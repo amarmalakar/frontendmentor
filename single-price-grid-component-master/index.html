@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Single Price Grid Component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;600;800&display=swap');
+    * {
+      margin: 0;
+      bottom: 0;
+      box-sizing: border-box;
+      font-family: 'Work Sans', sans-serif;
+    }
+    :root {
+      --bgColor: rgb(230, 239, 246);
+      --primary: rgb(43, 179, 177);
+      --primaryLight: rgb(74, 190, 189);
+      --secondary: rgb(191, 223, 50);
+    }
+
+    body {
+      background-color: var(--bgColor);
+    }
+
+    main {
+      max-width: 768px;
+      margin: auto;
+      margin-top: 60px;
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .main__header {padding: 45px 30px;}
+    .main__header > h2 {font-weight: 600;color: var(--primary);}
+    .main__header > h3 {font-weight: 400;color: var(--secondary);margin: 20px 0;}
+    .main__header > p {font-size: 15px;line-height: 1.6;color: #aaa;}
+
+    .main__flex {display: flex;}
+    .box--1 {background: var(--primary);}
+    .box--2 {background: var(--primaryLight);}
+    .box {
+      flex-basis: 50%;
+      padding: 30px;
+      color: #fff;
+    }
+    .box > h4 {font-weight: 600;margin-bottom: 24px;}
+    .box > h2 {font-weight: 600;font-size: 32px;display: flex;align-items: center;}
+    .box > h2 > small {font-weight: 300;font-size: 16px;color: #ddd;margin-left: 14px;}
+    .box > p {margin-top: 12px;color: #eee;font-size: 14px;line-height: 1.6;font-weight: 300;}
+    .box > button {
+      display: block;
+      background-color: var(--secondary);
+      border: none;
+      color: #fff;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: 600;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        border-radius: 0;
+        margin-top: 0;
+      }
+      .main__flex {display: block;}
+    }
+  </style>
+</head>
+<body>
+  
+<main>
+  <div class="main__header">
+    <h2>Join our community</h2>
+    <h3>30-day, hassle-free money back gurantee</h3>
+    <p>Gain access to our full library of tutorials alog with expert code reviews. Perfect for any developers who are serious about honing their skills.</p>
+  </div>
+
+  <div class="main__flex">
+    <div class="box box--1">
+      <h4>Monthly Subscription</h4>
+      <h2>$26 <small>per month</small></h2>
+      <p>Full access for less than $1 a day</p>
+      <button>Sign Up</button>
+    </div>
+    <div class="box box--2">
+      <h4>Why Us</h4>
+      <p>Tutorials by industry experts Peer & expert code review Coding exercises Access to our GitHub repos Community fourm Flashcard decks New videos every week</p>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
