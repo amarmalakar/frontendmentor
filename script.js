@@ -41,6 +41,9 @@ const data = [
             }, {
                 text: 'single price grid component',
                 url: './single-price-grid-component-master'
+            }, {
+                text: 'ping coming soon page',
+                url: './ping-coming-soon-page-master'
             }
         ]
     },

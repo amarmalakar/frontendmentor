@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Ping coming soon page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    main {
+      max-width: 768px;
+      margin: auto;
+      padding: 48px 16px;
+      text-align: center;
+    }
+
+    .heading__wrapper {margin: 30px 0;}
+    .heading {font-weight: 300;color: #aaa;font-size: 42px;}
+    .heading > b {color: #333;font-weight: 600;}
+    .sub__heading {font-weight: 300;font-size: 22px;line-height: 2;}
+
+    .email__form--wrapper > p {
+      color: #f00;
+      float: left;
+      padding-left: 24px;
+      font-size: 12px;
+      font-style: italic;
+      font-weight: 600;
+    }
+    .email__form {
+      display: flex;
+      align-items: center;
+    }
+    .email__form > input {
+      flex: 1;
+      border-radius: 40px;
+      padding: 12px 32px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+    .email__form > input::placeholder {color: #ccc;}
+    .email__form > button {
+      margin-left: 12px;
+      width: 172px;
+      background-color: cornflowerblue;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 40px;
+      padding: 12px;
+      cursor: pointer;
+    }
+
+    .illustration-dashboard {
+      width: 100%;
+      margin: 75px 0;
+    }
+
+    .social__icons {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+    }
+    .social__icons > li {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #ddd;
+      display: grid;
+      place-items: center;
+      color: cornflowerblue;
+      margin-right: 12px;
+      border-radius: 50%;
+      font-size: 14px;
+    }
+    .social__icons > li:last-child {margin-right: 0;}
+    .social__icons > li:hover {
+      background-color: cornflowerblue;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .footer__text {
+      font-size: 12px;
+      color: #aaa;
+      margin: 24px 0;
+    }
+    #errorText {display: none;}
+    .error--inp {border-color: #f00!important;}
+
+    @media (max-width: 768px) {
+      .heading {font-size: 22px;}
+      .sub__heading {font-size: 16px;}
+
+      .email__form {display: block;}
+      .email__form > input,
+      .email__form > button {width: 100%;}
+      .email__form > button {margin-left: 0;margin-top: 16px;}
+    }
+  </style>
+</head>
+<body>
+
+<main>
+  <img src="./images/logo.svg" alt="">
+
+  <div class="heading__wrapper">
+    <h1 class="heading">We are launching <b>soon!</b></h1>
+    <h3 class="sub__heading">Subscribe and get notified</h3>
+  </div>
+
+  <div class="email__form--wrapper">
+    <div class="email__form">
+      <input type="email" placeholder="Your email address..." id="email" />
+      <button onclick="submitForm()">Notify Me</button>
+    </div>
+    <p id="errorText">Please provide a valid email address</p>
+  </div>
+
+  <img src="./images/illustration-dashboard.png" class="illustration-dashboard" alt="">
+
+  <ul class="social__icons">
+    <li><i class="fa-brands fa-facebook-f"></i></li>
+    <li><i class="fa-brands fa-twitter"></i></li>
+    <li><i class="fa-brands fa-instagram"></i></li>
+  </ul>
+  <p class="footer__text">© Copyright Ping. All rightd reserved.</p>
+</main>
+
+<script>
+
+const email = document.getElementById('email');
+const errorText = document.getElementById('errorText');
+function submitForm () {
+  if (email.value.trim().length === 0) {
+    errorText.style.display = 'block';
+    email.classList.add("error--inp")
+  } else {
+    errorText.style.display = 'none';
+    email.classList.remove("error--inp")
+  }
+  // alert(email.value)
+}
+
+</script>
+
+</body>
+</html>
