@@ -44,6 +44,9 @@ const data = [
             }, {
                 text: 'ping coming soon page',
                 url: './ping-coming-soon-page-master'
+            }, {
+                text: 'huddle landing page with single introductory section',
+                url: './huddle-landing-page-with-single-introductory-section-master'
             }
         ]
     },

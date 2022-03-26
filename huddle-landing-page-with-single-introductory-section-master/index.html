@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <title>Frontend Mentor | Huddle landing page with single introductory section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --Violet: hsl(257, 40%, 49%);
+      --SoftMagenta: hsl(300, 69%, 71%);
+      --openSans: 'Open Sans', sans-serif;
+      --poppins: 'Poppins', sans-serif;
+    }
+    main {
+      width: 100%;
+      min-height: 100vh;
+      background-color: var(--Violet);
+      background-image: url(./images/bg-desktop.svg);
+    }
+    .wrapper {
+      max-width: 1024px;
+      margin: auto;
+      padding: 32px 16px;
+    }
+
+    .wrapper__body {
+      display: flex;align-items: center;
+      margin: 75px 0;
+    }
+    .wrapper__body--img {
+      flex: 1;
+    }
+    .wrapper__body--img > img {width: 100%;}
+    .wrapper__body--text {
+      width: 496px;
+      margin-left: 32px;
+      font-family: var(--poppins);
+    }
+    .wrapper__body--text > h1 {color: #fff;font-size: 42px;}
+    .wrapper__body--text > p {color: #fff; margin-top: 12px;line-height: 1.6;}
+    .wrapper__body--text > button {
+      background-color: #fff;
+      border-radius: 40px;
+      color: var(--Violet);
+      padding: 12px;
+      font-family: var(--poppins);
+      font-size: 18px;
+      width: 172px;
+      border: none;
+      display: inline-block;
+      margin-top: 24px;
+    }
+    .wrapper__body--text > button:hover {
+      background-color: var(--SoftMagenta);
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .social__icons {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+    }
+    .social__icons > li {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #ddd;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      margin-right: 12px;
+      border-radius: 50%;
+      font-size: 14px;
+    }
+    .social__icons > li:last-child {margin-right: 0;}
+    .social__icons > li:hover {
+      border-color: var(--SoftMagenta);
+      color: var(--SoftMagenta);
+      cursor: pointer;
+    }
+    .social__icons--wrapper {float: right;}
+
+    @media (max-width: 768px) {
+      .header__logo {width: 172px;}
+      .wrapper__body {display: block;}
+      .wrapper__body--img {max-width: 436px;margin: auto;}
+      .wrapper__body--text {text-align: center;margin-left: 0;width: 100%;}
+      .social__icons--wrapper {float: none;}
+      .wrapper__body--text > h1 {font-size: 30px;}
+    }
+  </style>
+</head>
+<body>
+
+<main>
+  <div class="wrapper">
+    <img src="./images/logo.svg" alt="" class="header__logo">
+
+    <div class="wrapper__body">
+      <div class="wrapper__body--img">
+        <img src="./images/illustration-mockups.svg" alt="">
+      </div>
+      <div class="wrapper__body--text">
+        <h1>Build The Community Your Fans Will Love</h1>
+        <p>Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connection with your users as you engage in genuine discussion.</p>
+        <button>Register</button>
+      </div>
+    </div>
+
+    <div class="social__icons--wrapper">
+      <ul class="social__icons">
+        <li><i class="fa-brands fa-facebook-f"></i></li>
+        <li><i class="fa-brands fa-twitter"></i></li>
+        <li><i class="fa-brands fa-instagram"></i></li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
