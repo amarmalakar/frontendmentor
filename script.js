@@ -50,16 +50,13 @@ const data = [
             }
         ]
     },
-    // {
-    //     difficulty: 'Junior',
-    //     challanges: [
-    //         {
-    //             text: 'Advice generator app',
-    //             url: '#'
-    //         }, {
-    //             text: 'Suite landing page',
-    //             url: '#'
-    //         }
-    //     ]
-    // }
+    {
+        difficulty: 'Junior',
+        challanges: [
+            {
+                text: 'advice generator app',
+                url: './advice-generator-app-main'
+            }
+        ]
+    }
 ]
