@@ -56,6 +56,9 @@ const data = [
             {
                 text: 'advice generator app',
                 url: './advice-generator-app-main'
+            }, {
+                text: 'time tracking dashboard',
+                url: './time-tracking-dashboard-main'
             }
         ]
     }
