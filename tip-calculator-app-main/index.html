@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Space Mono', monospace;
+    }
+    :root {
+      --StrongCyan: hsl(172, 67%, 45%);
+      --VeryDarkCyan: hsl(183, 100%, 15%);
+      --DarkDrayishCyan: hsl(186, 14%, 43%);
+      --GrayishCyan: hsl(184, 14%, 56%);
+      --LightGrayishCyan: hsl(185, 41%, 84%);
+      --VeryLightGrayishCyan: hsl(189, 41%, 97%);
+      --White: hsl(0, 0%, 100%);
+    }
+
+    main {
+      width: 100%;
+      min-height: 100vh;
+      background-color: var(--LightGrayishCyan);
+    }
+    .wrapper {max-width: 768px;margin: auto;padding-top: 60px;}
+    h2.heading {
+      text-align: center;
+      color: var(--DarkDrayishCyan);
+      letter-spacing: 8px;
+      margin-bottom: 45px;
+    }
+    .container {
+      padding: 16px;
+      background-color: var(--White);
+      border-radius: 12px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 24px;
+    }
+    .res__col {
+      background-color: var(--VeryDarkCyan);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .res__col--list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 20px 0;
+    }
+    .res__col--list > div > h5 {color: var(--White);}
+    .res__col--list > div > p > small {color: var(--LightGrayishCyan);font-size: 12px;}
+    .res__col--list > span {color: var(--StrongCyan);font-size: 30px;}
+    .reset__btn {
+      width: 100%;
+      border: none;
+      background-color: var(--StrongCyan);
+      color: var(--VeryDarkCyan);
+      padding: 8px;
+      border-radius: 3px;
+    }
+
+    .form__col {}
+    .label__text {font-size: 12px;color: var(--VeryDarkCyan);margin-bottom: 6px;}
+    .form__control {
+      background-color: var(--VeryLightGrayishCyan);
+      padding: 4px 12px;
+      border-radius: 3px;
+      display: flex;align-items: center;
+    }
+    .form__control > input {
+      text-align: right;
+      flex: 1;
+      font-size: 24px;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: var(--VeryDarkCyan);
+    }
+    .btn__gird {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 12px;
+    }
+    .btn__gird > button {
+      border: none;
+      outline: none;
+      background-color: var(--VeryDarkCyan);
+      color: #fff;
+      border-radius: 4px;
+      padding: 12px;
+    }
+    .btn__gird > button.active {
+      background-color: var(--StrongCyan);
+      color: var(--VeryDarkCyan);
+    }
+    .btn__gird > button.custom {
+      background-color: var(--VeryLightGrayishCyan);
+      color: var(--VeryDarkCyan);
+    }
+
+    @media (max-width: 768px) {
+      .container {grid-template-columns: repeat(1, 1fr);}
+      .reset__btn {margin-top: 16px;}
+      .wrapper {padding: 30px 0;}
+    }
+  </style>
+</head>
+<body>
+
+<main>
+  <div class="wrapper">
+    <h2 class="heading">SPLI<br>TTER</h2>
+    <div class="container">
+
+      <div class="form__col">
+        <p class="label__text">Bill</p>
+        <div class="form__control">
+          <img src="./images/icon-dollar.svg" alt="">
+          <input type="text" value="142.55" />
+        </div>
+
+        <br>
+
+        <p class="label__text">Select Tip %</p>
+        <div class="btn__gird">
+          <button>5%</button>
+          <button>10%</button>
+          <button class="active">15%</button>
+          <button>25%</button>
+          <button>50%</button>
+          <button class="custom">Custom</button>
+        </div>
+
+        <br>
+
+        <p class="label__text">Number of People</p>
+        <div class="form__control">
+          <img src="./images/icon-person.svg" alt="">
+          <input type="text" value="5" />
+        </div>
+      </div>
+
+      <div class="res__col">
+        <div>
+          <div class="res__col--list">
+            <div>
+              <h5>Tip Amount</h5>
+              <p><small>/ person</small></p>
+            </div>
+            <span>$4.27</span>
+          </div>
+          <div class="res__col--list">
+            <div>
+              <h5>Tip</h5>
+              <p><small>/ person</small></p>
+            </div>
+            <span>$32.79</span>
+          </div>
+        </div>
+
+        <button class="reset__btn">RESET</button>
+      </div>
+
+    </div>
+  </div>
+</main>
+  
+</body>
+</html>

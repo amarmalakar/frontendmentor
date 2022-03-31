@@ -59,6 +59,9 @@ const data = [
             }, {
                 text: 'time tracking dashboard',
                 url: './time-tracking-dashboard-main'
+            }, {
+                text: 'Tip Calculator App',
+                url: './tip-calculator-app-main'
             }
         ]
     }
