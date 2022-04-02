@@ -62,6 +62,9 @@ const data = [
             }, {
                 text: 'Tip Calculator App',
                 url: './tip-calculator-app-main'
+            }, {
+                text: 'sunnyside agency landing page',
+                url: './sunnyside-agency-landing-page-main'
             }
         ]
     }
