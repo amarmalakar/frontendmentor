@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+  
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | Loopstudios landing page</title>
+  
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+        @import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+        :root {
+            /* fonts */
+            --alata: 'Alata', sans-serif;
+            --josefinSans: 'Josefin Sans', sans-serif;
+
+            /* colors */
+            --White: hsl(0, 0%, 100%);
+            --Black: hsl(0, 0%, 0%);
+            --DarkGray: hsl(0, 0%, 55%);
+            --VeryDarkGray: hsl(0, 0%, 41%);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {font-size: 15px;}
+
+        .wrapper {max-width: 1096px;margin: auto;}
+        .p-32-16 {padding: 32px 16px;}
+
+        header {
+            width: 100%;
+            height: 100vh;
+            background-image: url(./images/desktop/image-hero.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        nav {
+            padding: 32px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: var(--alata);
+        }
+        nav a {color: #fff;text-decoration: none;}
+        .links > a {margin-right: 16px;}
+        .links > a:last-child {margin-right: 0;}
+        .nav__icon {display: none;}
+
+        .header__lg--text {
+            border: 2px solid #fff;
+            width: 432px;
+            margin-top: 16vh;
+        }
+        .header__lg--text p {
+            color: #fff;
+            font-family: var(--josefinSans);
+            text-transform: uppercase;
+            font-size: 48px;
+        }
+
+        .vr {padding: 90px 16px;position: relative;}
+        .vr__img {width: 65%;}
+        .vr__img > img {width: 100%;}
+        .vr__text {
+            padding: 32px;
+            width: 45%;
+            position: absolute;
+            right: 0%;
+            bottom: 10%;
+            background-color: #fff;
+            font-family: var(--alata);
+        }
+        .vr__lg__text {font-size: 42px;text-transform: uppercase;font-family: var(--josefinSans);font-weight: 300;margin-bottom: 16px;}
+        .vr__text p {color: var(--DarkGray);}
+
+        .our__creation--flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 32px;
+    }
+        .our__creation--lg {font-family: var(--josefinSans);font-weight: 300;font-size: 36px;}
+        .see_all-btn {
+            padding: 12px 30px;
+            background-color: transparent;
+            font-family: var(--alata);
+            border: 1px solid var(--Black);
+            letter-spacing: 2px;
+        }
+        .project__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 16px;
+            margin-bottom: 72px;
+        }
+        .project__grid {
+            font-family: var(--josefinSans);
+            font-size: 18px;
+            color: #fff;
+        }
+        .project__card h2 {
+            align-self: flex-end;
+            padding: 16px 20px;
+            width: 172px;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+        .project__card {
+            height: 336px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+        }
+        .project__card:nth-child(1) {background-image: url(./images/desktop/image-deep-earth.jpg);}
+        .project__card:nth-child(2) {background-image: url(./images/desktop/image-night-arcade.jpg);}
+        .project__card:nth-child(3) {background-image: url(./images/desktop/image-soccer-team.jpg);}
+        .project__card:nth-child(4) {background-image: url(./images/desktop/image-grid.jpg);}
+        .project__card:nth-child(5) {background-image: url(./images/desktop/image-from-above.jpg);}
+        .project__card:nth-child(6) {background-image: url(./images/desktop/image-pocket-borealis.jpg);}
+        .project__card:nth-child(7) {background-image: url(./images/desktop/image-curiosity.jpg);}
+        .project__card:nth-child(8) {background-image: url(./images/desktop/image-fisheye.jpg);}
+        .see_all-btn.without__flex {display: none;}
+
+        footer {background-color: var(--Black);font-family: var(--alata);color: #fff;}
+        .footer__flex {display: flex;align-items: center;justify-content: space-between;}
+        .footer__nav a {text-decoration: none;color: #fff;margin-right: 16px;}
+        .footer__nav a:last-child {margin-right: 0;}
+        .footer__nav a:hover {text-decoration: underline;}
+        .footer__icon--nav a {color: #fff;margin-right: 12px;font-size: 18px;}
+        .footer__icon--nav a:last-child {margin-right: 0;}
+        footer p {color: var(--DarkGray);}
+        .footer__logo,
+        .footer__nav,
+        .footer__icon--nav,
+        .footer__icon--nav + p {margin-bottom: 12px;}
+
+        @media (min-width: 768px) {.mob__nav {display: none!important;}}
+        @media (max-width: 768px) {
+            .links {display: none;}
+            .nav__icon {display: block;}
+            .mob__nav {
+                width: 100%;
+                height: 100vh;
+                background-color: var(--Black);
+                position: fixed;
+                top: 0;
+                left: 0;
+                display: none;
+            }
+            .mob__nav--header {padding: 32px 16px;display: flex;align-items: center;justify-content: space-between;}
+            .mob__nav--body {
+                width: 100%;
+                height: 100%;
+                margin-top: 100px;
+            }
+            .mob__nav--links a {
+                display: block;
+                text-decoration: none;
+                font-family: var(--josefinSans);
+                text-transform: uppercase;
+                color: #fff;
+                font-size: 18px;
+                padding: 12px 24px;
+            }
+            .mob__nav--links a:hover {text-decoration: underline;}
+            .header__lg--text {width: 100%;}
+
+            .vr {max-width: 496px;}
+            .vr__img {margin-bottom: 30px;}
+            .vr, .vr__text {position: unset;}
+            .vr, .vr__img, .vr__text {width: 100%;text-align: center;}
+            .vr__text p {line-height: 1.6;}
+
+            .our__creation--flex {display: block;text-align: center;margin-bottom: 45px;}
+            .see_all-btn.with__flex {display: none;}
+            .project__grid {grid-template-columns: repeat(1, 1fr);max-width: 496px;margin: auto;grid-gap: 20px;}
+            .project__card {height: 156px;}
+            .project__card:nth-child(1) {background-image: url(./images/mobile/image-deep-earth.jpg);}
+            .project__card:nth-child(2) {background-image: url(./images/mobile/image-night-arcade.jpg);}
+            .project__card:nth-child(3) {background-image: url(./images/mobile/image-soccer-team.jpg);}
+            .project__card:nth-child(4) {background-image: url(./images/mobile/image-grid.jpg);}
+            .project__card:nth-child(5) {background-image: url(./images/mobile/image-from-above.jpg);}
+            .project__card:nth-child(6) {background-image: url(./images/mobile/image-pocket-borealis.jpg);}
+            .project__card:nth-child(7) {background-image: url(./images/mobile/image-curiosity.jpg);}
+            .project__card:nth-child(8) {background-image: url(./images/mobile/image-fisheye.jpg);}
+            .see_all-btn.without__flex {margin: 45px auto;display: block;}
+
+            footer {text-align: center;}
+            .footer__flex {display: block;}
+            .footer__nav a {display: block;margin-right: 0;margin: 8px 0;font-size: 18px;}
+            .footer__logo,
+            .footer__nav,
+            .footer__icon--nav {margin-bottom: 30px;}
+        }
+    </style>
+</head>
+<body>
+    
+<div class="mob__nav">
+    <div class="mob__nav--header">
+        <a href="#"><img src="./images/logo.svg" alt=""></a>
+        <a href="javascript:void(0)" class="nav__icon" onclick="hideMobNav()">
+            <img src="./images/icon-close.svg" alt="">
+        </a>
+    </div>
+    <div class="mob__nav--body">
+        <div class="mob__nav--links">
+            <a href="#">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Events</a>
+            <a href="#">Products</a>
+            <a href="#">Support</a>
+        </div>
+    </div>
+</div>
+
+<header>
+    <nav class="wrapper">
+        <a href="#"><img src="./images/logo.svg" alt=""></a>
+        <div class="links">
+            <a href="#">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Events</a>
+            <a href="#">Products</a>
+            <a href="#">Support</a>
+        </div>
+        <a href="javascript:void(0)" class="nav__icon" onclick="showMobNav()">
+            <img src="./images/icon-hamburger.svg" alt="">
+        </a>
+    </nav>
+
+    <div class="wrapper p-32-16">
+        <div class="header__lg--text p-32-16">
+            <p>Immersive experiences that deliver</p>
+        </div>
+    </div>
+</header>
+
+<div class="wrapper vr">
+    <div class="vr__img">
+        <img src="./images/desktop/image-interactive.jpg" alt="">
+    </div>
+    <div class="vr__text">
+        <h2 class="vr__lg__text">The leader in interactive VR</h2>
+
+        <p>
+            Founded in 2011, Loopstudios has been producing world-class virtual reality
+            projects for some of the best companies around the globe. Our award-winning
+            creations have transformed businesses through digital experiences that bind
+            to their brand.
+        </p>
+    </div>
+</div>
+
+<div class="wrapper p-32-16">
+    <div class="our__creation--flex">
+        <h2 class="our__creation--lg">OUR CREATIONS</h2>
+        <button class="see_all-btn with__flex">SEE ALL</button>
+    </div>
+
+    <div class="project__grid">
+        <div class="project__card">
+            <h2>Deep earth</h2>
+        </div>
+        <div class="project__card">
+            <h2>Night arcade</h2>
+        </div>
+        <div class="project__card">
+            <h2>Soccer team VR</h2>
+        </div>
+        <div class="project__card">
+            <h2>The grid</h2>
+        </div>
+        <div class="project__card">
+            <h2>From up above VR</h2>
+        </div>
+        <div class="project__card">
+            <h2>Pocket borealis</h2>
+        </div>
+        <div class="project__card">
+            <h2>The curiosity</h2>
+        </div>
+        <div class="project__card">
+            <h2>Make it fisheye</h2>
+        </div>
+    </div>
+
+    <div style="text-align: center;">
+        <button class="see_all-btn without__flex">SEE ALL</button>
+    </div>
+</div>
+
+
+<footer>
+    <div class="wrapper p-32-16 footer__flex">
+        <div>
+            <a href="#"><img src="./images/logo.svg" class="footer__logo" alt=""></a>
+            <div class="footer__nav">
+                <a href="#">About</a>
+                <a href="#">Careers</a>
+                <a href="#">Events</a>
+                <a href="#">Products</a>
+                <a href="#">Support</a>
+            </div>
+        </div>
+
+        <div>
+            <div class="footer__icon--nav">
+                <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+            <p>© 2021 Loopstudios. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+
+const showMobNav = () => document.querySelector('.mob__nav').style.display = "block";
+const hideMobNav = () => document.querySelector('.mob__nav').style.display = "none";
+
+</script>
+
+</body>
+</html>

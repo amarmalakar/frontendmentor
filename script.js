@@ -68,7 +68,10 @@ const data = [
             }, {
                 text: 'crowdfunding product page',
                 url: './crowdfunding-product-page-main'
-            }
+            }, {
+text: 'loopstudios landing page',
+url: './loopstudios-landing-page-main'
+		}
         ]
     }
 ]
