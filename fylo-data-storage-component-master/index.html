@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+  
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | Fylo data storage component</title>
+  
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --raleway: 'Raleway', sans-serif;
+
+            --Gradient: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+
+            /* ### Neutral */
+            --PaleBlue: hsl(243, 100%, 93%);
+            --GrayishBlue: hsl(229, 7%, 55%);
+            --DarkBlue: hsl(228, 56%, 26%);
+            --VeryDarkBlue: hsl(229, 57%, 11%);
+        }
+
+        body {font-size: 14px;}
+
+        main {
+            width: 100%;
+            min-height: 100vh;
+            background-color: var(--VeryDarkBlue);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main__bg--img {
+            width: 100%;
+            height: 50vh;
+            background-image: url(./images/bg-desktop.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            bottom: 0;
+        }
+        .fylo__container {
+            z-index: 1000;
+            width: 768px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .left {
+            width: 250px;
+            background-color: var(--DarkBlue);
+            padding: 24px;
+            border-radius: 12px;
+            border-top-right-radius: 60px;
+        }
+        .left__logo {padding: 12px 0;width: 100px;}
+        .left__icon--list {list-style: none;display: flex;}
+        .left__icon--list > li {
+            background-color: var(--VeryDarkBlue);
+            margin-right: 12px;
+            width: 30px;
+            height: 30px;
+            border-radius: 6px;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .left__icon--list > li:last-child {margin-right: 0;}
+        .left__icon--list > li > img {width: 100%;}
+
+        .right {
+            background-color: var(--DarkBlue);
+            padding: 24px;
+            border-radius: 12px;
+            font-family: var(--raleway);
+            color: #fff;
+            margin-left: 24px;
+            flex: 1;
+            font-size: 12px;
+            position: relative;
+        }
+        .right__popup {
+            position: absolute;
+            right: 5%;
+            top: -30%;
+            background-color: #fff;
+            color: var(--DarkBlue);
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+            border-radius: 8px;
+            z-index: 1000;
+        }
+        .right__popup::after {
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 24px solid #fff;
+            border-left: 24px solid transparent;
+            right: 0;
+            bottom: -18px;
+        }
+        .slider__wrapper {
+            width: 100%;
+            height: 12px;
+            border-radius: 60px;
+            background-color: var(--VeryDarkBlue);
+            margin: 8px 0;
+        }
+        .slider {
+            background-image: var(--Gradient);
+            width: 70%;
+            height: 100%;
+            border-radius: 60px;
+            position: relative;
+        }
+        .slider::after {
+            position: absolute;
+            content: '';
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #fff;
+            right: 0%;
+        }
+        .slider__details {display: flex;justify-content: space-between;}
+
+        @media (max-width: 768px) {
+            main {padding: 16px;}
+            .main__bg--img {
+                top: 0;left: 0;
+                height: 100%;
+                background-image: url(./images/bg-mobile.png);
+            }
+            .fylo__container {display: block;}
+            .left {
+                width: 100%;
+                padding: 32px;
+            }
+            .right {
+                margin: 0;
+                margin-top: 24px;
+                padding-bottom: 50px;
+            }
+            .right__popup {
+                top: 100%;
+                left: 50%;
+                right: unset;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                padding: 12px 24px;
+            }
+            .right__popup::after {position: unset;content: none;}
+        }
+    </style>
+</head>
+<body>
+    
+<main>
+    <div class="main__bg--img"></div>
+
+    <div class="fylo__container">
+        <div class="left">
+            <img src="./images/logo.svg" alt="" class="left__logo">
+            
+            <ul class="left__icon--list">
+                <li><img src="./images/icon-document.svg" alt=""></li>
+                <li><img src="./images/icon-folder.svg" alt=""></li>
+                <li><img src="./images/icon-upload.svg" alt=""></li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <div class="right__popup">
+                <h1>185</h1>
+                <p><small>GB left</small></p>
+            </div>
+            <div class="right__container">
+                <p>You’ve used <b>815 GB</b> of your storage</p>
+                <div class="slider__wrapper">
+                    <div class="slider"></div>
+                </div>
+                <div class="slider__details">
+                    <p>0 GB</p>
+                    <p>1000 GB</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
