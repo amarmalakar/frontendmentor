@@ -76,5 +76,14 @@ const data = [
                 url: './fylo-data-storage-component-master'
             }
         ]
+    },
+    {
+        difficulty: 'Advanced',
+        challanges: [
+            {
+                text: 'REST Countries API with color theme switcher',
+                url: 'https://country-list-with-api.vercel.app/'
+            }
+        ]
     }
 ]
