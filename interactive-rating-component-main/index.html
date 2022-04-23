@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | Interactive rating component</title>
+  
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Overpass', sans-serif;
+        }
+        :root {
+            --Orange: hsl(25, 97%, 53%);
+            --White: hsl(0, 0%, 100%);
+            --LightGrey: hsl(217, 12%, 63%);
+            --MediumGrey: hsl(216, 12%, 54%);
+            --DarkBlue: hsl(213, 19%, 18%);
+            --VeryDarkBlue: hsl(216, 12%, 8%);
+        }
+        body {
+            background-color: var(--VeryDarkBlue);
+        }
+
+        main {
+            max-width: 346px;
+            margin: auto;
+            margin-top: 20vh;
+            padding: 24px;
+            background: var(--DarkBlue);
+            border-radius: 16px;
+        }
+        .top__start--img {
+            background-color: var(--DarkBlue);
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, .6);
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h2 {
+            color: var(--White);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+        p {
+            font-size: 15px;
+            color: var(--LightGrey);
+            line-height: 1.6;
+        }
+        button {
+            background-color: var(--Orange);
+            border: none;
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border-radius: 40px;
+            text-transform: uppercase;
+            color: var(--White);
+            cursor: pointer;
+        }
+        .rating__list {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .rating__list > li {
+            background-color: var(--DarkBlue);
+            color: var(--White);
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, .6);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .rating__list > li:hover {background-color: var(--Orange);}
+        .rating__list > li.active {background-color: var(--MediumGrey);}
+
+        .thank {text-align: center;}
+        .rating__label {
+            color: var(--Orange);
+            background-color: var(--DarkBlue);
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, .6);
+            display: inline-block;
+            font-size: 14px;
+            padding: 8px 20px;
+            border-radius: 40px;
+            margin-top: 12px;
+        }
+
+        #thank__container {display: none;}
+    </style>
+</head>
+<body>
+    
+<main>
+    <div class="rating" id="rating__container">
+        <div class="top__start--img">
+            <img src="./images/icon-star.svg" alt="">
+        </div>
+
+        <h2>How did we do?</h2>
+        <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+
+        <ul class="rating__list">
+            <li value="1" class="rating__list--li" onclick="selectRating(this)">1</li>
+            <li value="2" class="rating__list--li" onclick="selectRating(this)">2</li>
+            <li value="3" class="rating__list--li" onclick="selectRating(this)">3</li>
+            <li value="4" class="rating__list--li" onclick="selectRating(this)">4</li>
+            <li value="5" class="rating__list--li" onclick="selectRating(this)">5</li>
+        </ul>
+
+        <button onclick="submitRating()">Submit</button>
+    </div>
+
+    <div class="thank" id="thank__container">
+        <img src="./images/illustration-thank-you.svg" alt="">
+
+        <div class="rating__label">
+            You selected 4 out of 5
+        </div>
+
+        <h2>Thank you!</h2>
+        <p>We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+    </div>
+</main>
+
+<script>
+    let rating = undefined;
+    const rating__list__li = document.querySelectorAll(".rating__list--li");
+
+    const selectRating = (elm) => {
+        for (let i = 0; i < rating__list__li.length; i++) {
+            rating__list__li[i].classList.remove("active");
+        }
+        elm.classList.add("active");
+        rating = elm.value;
+    }
+
+    const submitRating = () => {
+        if (rating === undefined) {
+            alert("Please Select Rating Star!");
+        } else {
+            document.querySelector(".rating__label").innerHTML = `You selected ${rating} out of 5`;
+            document.getElementById("rating__container").style.display = "none";
+            document.getElementById("thank__container").style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>

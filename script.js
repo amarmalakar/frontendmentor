@@ -47,6 +47,9 @@ const data = [
             }, {
                 text: 'huddle landing page with single introductory section',
                 url: './huddle-landing-page-with-single-introductory-section-master'
+            }, {
+                text: 'interactive rating component',
+                url: './interactive-rating-component-main'
             }
         ]
     },
